@@ -638,6 +638,12 @@ double PropsSI(const std::string& Output, const std::string& Name1, double Prop1
         if (get_debug_level() > 1) {
             std::cout << format("_PropsSI will return %g", val) << std::endl;
         }
+
+        // Clear memory ADDED BY CÉDRIC on 2023-01-26
+        IO.clear();
+        fractions.clear();
+        // MODIFICATION ENDS HERE
+        
         return val;
         // END OF TRY
 #if !defined(NO_ERROR_CATCHING)
